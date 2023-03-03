@@ -1,7 +1,12 @@
-@import 'mixin';
-@import 'userBox';
+@import "mixin";
+@import "userBox";
 
 .avatar {
-    height: 200px;
-    width: 200px;
+  height: 200px;
+  width: 200px;
+}
+
+.modal-content {
+  width: 412px !important;
+  margin: auto !important;
 }
