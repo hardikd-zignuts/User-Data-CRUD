@@ -61,7 +61,7 @@ const EditModal = (props) => {
                 <span className="text-danger me-2">*</span>
                 <span>Website</span>
               </Form.Label>
-              <Form.Control value={email} type="email" required />
+              <Form.Control value={website} type="email" required />
             </Form.Group>
           </Form>
         </Modal.Body>
