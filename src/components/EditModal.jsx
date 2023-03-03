@@ -1,9 +1,9 @@
-import Button from "react-bootstrap/Button";
+import { Button, Form } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
-import { AiOutlineClose } from "react-icons/ai";
+// import { AiOutlineClose } from "react-icons/ai";
 
 const EditModal = (props) => {
-  //   const { name, email, website, phone, username } = props.item;
+  const { name, email, website, phone, username } = props.item;
   return (
     <>
       <Modal
@@ -18,12 +18,52 @@ const EditModal = (props) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Centered Modal</h4>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </p>
+          <Form>
+            {/* Name */}
+            <Form.Group
+              className="mb-3 d-flex align-items-center gap-2"
+              controlId="formBasicPassword"
+            >
+              <Form.Label>
+                <span className="text-danger me-2">*</span>
+                <span>Name</span>
+              </Form.Label>
+              <Form.Control value={name} type="text" required />
+            </Form.Group>
+            {/* Email  */}
+            <Form.Group
+              className="mb-3 d-flex align-items-center gap-2"
+              controlId="formBasicPassword"
+            >
+              <Form.Label>
+                <span className="text-danger me-2">*</span>
+                <span>Email</span>
+              </Form.Label>
+              <Form.Control value={email} type="email" required />
+            </Form.Group>
+            {/* Phone  */}
+            <Form.Group
+              className="mb-3 d-flex align-items-center gap-2"
+              controlId="formBasicPassword"
+            >
+              <Form.Label>
+                <span className="text-danger me-2">*</span>
+                <span>Phone</span>
+              </Form.Label>
+              <Form.Control value={phone} type="tel" required />
+            </Form.Group>
+            {/* Website  */}
+            <Form.Group
+              className="mb-3 d-flex align-items-center gap-2"
+              controlId="formBasicPassword"
+            >
+              <Form.Label>
+                <span className="text-danger me-2">*</span>
+                <span>Website</span>
+              </Form.Label>
+              <Form.Control value={email} type="email" required />
+            </Form.Group>
+          </Form>
         </Modal.Body>
         <Modal.Footer>
           <button className="btn btn-outline-primary" onClick={props.onHide}>
